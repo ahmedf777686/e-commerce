@@ -1,0 +1,26 @@
+<section class="w-75 mx-auto p-4 ">
+    <button [routerLink]="['/payment',cartdata._id]" class="main-btn mt-2">online payment <img src="./assets/images/visa-1.svg" alt=""></button>
+
+<h2>shop cart</h2>
+<h2 class="main-color">Total price:{{cartdata.totalCartPrice}}</h2>
+<div class="row border-bottom py-2" *ngFor="let item of cartdata.products
+">
+    <div class="col-md-1">
+        <img class="w-100" [src]="item.product.imageCover" [alt]="">
+    </div>
+    <div class="col-md-11  hstack justify-content-between">
+    <div >
+        <h3>{{item.product.title|pipeone}}</h3>
+        <h3 class="main-color ">price:{{item.price}}</h3>
+        <span (click)="remcart(item.product._id)" role="button"><i class="fa fa-trash main-color "></i>Remove</span>
+    </div>
+    <div   >
+        <button  (click)="countsh(item.product._id,item.count + 1)" class="btn border-secondary mx-2">+</button>
+        <span class="main-color">{{item.count}}</span>
+        <button (click)="countsh(item.product._id,item.count - 1)" class="btn border-secondary mx-2">-</button>
+    </div>
+    </div>
+</div>
+
+<button (click)="clearcart()" class="btn btn-outline-success mt-2">clear your cart</button>
+</section>

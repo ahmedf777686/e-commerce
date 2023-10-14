@@ -1,0 +1,12 @@
+<section>
+    <form [formGroup]="forget" class="container py-4">
+
+        <h2>reset your account password</h2>
+
+        <input  [(ngModel)]="idcode" formControlName="email" placeholder="code ...." type="email" class="form-control py-4">
+        <p *ngIf="err" class="alert alert-danger ">{{err}}</p>
+        <button  (click)="getemail()"  class="btn btn-outline-success mt-4 btn-lg">verify</button>
+      
+    </form>
+</section>
+

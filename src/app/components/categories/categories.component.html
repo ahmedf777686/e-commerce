@@ -1,0 +1,27 @@
+<section>
+    <div  class="container py-5">
+        <div  class="row">
+            <div role="button"  (click)="detailscat(item._id) "  *ngFor="let item of cat" class="col-md-4">
+                <img height="300" class="w-100" [src]="item.image " alt="">
+                <h2 class="h5">{{item.name}}</h2>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+<section>
+   <div class="container">
+ <!-- <h5 *ngFor="let item of x?.data" class="text-center color">{{item.slug}}</h5> -->
+<h3 class="text-center color py-3">Home subcategories</h3>
+    <div class="row">
+       
+        <div *ngFor="let item of x.data" class="col-md-4 ">
+          
+            <h2 class="shadow p-4">{{item?.name}}</h2>
+        </div>
+    </div>
+   </div>
+</section>

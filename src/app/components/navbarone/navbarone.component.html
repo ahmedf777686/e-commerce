@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" routerLink="/home">
+            <img src="./assets/images/freshcart-logo.svg" alt="">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/home" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                </li>
+              
+             
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/products" aria-current="page">products <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/categories" aria-current="page">categories <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/brands" aria-current="page">brands <span class="visually-hidden">(current)</span></a>
+                </li>
+              
+               
+            </ul>
+            <ul class="navbar-nav ms-auto mt-2 d-flex  justify-content-center align-items-center gap-3 mt-lg-0">
+                <li class="nav-item position-relative">
+                    <a class="nav-link active " routerLink="/wishlist" aria-current="page">
+                        <i role="button"  routerLink="/cart" class="fa fa-heart text-success fa-2x"></i>
+                        <span class="visually-hidden">(current)</span></a>
+                        <span class="badge bg-info position-absolute top-0 end-0">{{count2}}</span>
+                </li>
+                <li class="nav-item position-relative">
+                    <a class="nav-link active " routerLink="/cart" aria-current="page">
+                        <i role="button"  routerLink="/cart" class="fa fa-cart-arrow-down text-success fa-2x"></i>
+                        <span class="visually-hidden">(current)</span></a>
+                        <span class="badge bg-info position-absolute top-0 end-0">{{numcount}}</span>
+                </li>
+                
+                <div>
+                    <i       role="button" class="fa fa-facebook"></i>
+                </div>
+                <div>
+                    <i    role="button"  class="fa fa-instagram"></i>
+                </div>
+                <div>
+                    <i     role="button" class="fa fa-twitter"></i>
+                </div>
+                <div>
+                    <i     role="button" class="fa fa-linkedin"></i>
+                </div>
+                <div>
+                    <i (click)="whatsApp()" class="fa fa-whatsapp"></i>
+                </div>
+                <li (click)="logout()" class="nav-item">
+                  <span  role="button">signOut </span>
+                </li>
+              
+           
+            </ul>
+         
+        </div>
+  </div>
+</nav>
+

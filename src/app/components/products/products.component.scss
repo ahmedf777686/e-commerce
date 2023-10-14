@@ -1,0 +1,14 @@
+$main-transition: 0.8s;
+
+$main-color: #0aad0a;
+$light-color: #f0f3f2;
+
+.main-btn {
+  border: unset;
+  cursor: pointer;
+  color: #fff !important;
+  background-color: $main-color !important;
+  padding: 4px 8px;
+  transition: background-color $main-transition;
+  border-radius: 5px;
+}

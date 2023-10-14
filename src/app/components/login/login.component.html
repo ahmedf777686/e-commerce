@@ -1,0 +1,44 @@
+
+
+<section>
+
+    <form (ngSubmit)="dataregister()" [formGroup]="loginform" class="mx-auto w-75 py-5">
+      
+        <div>
+            <label for="email">email</label>
+            <input formControlName="email" class="form-control" type="email"  id="email">
+            <div  *ngIf="loginform.get('email')?.errors&&(loginform.get('email')?.touched||loginform.get('email')?.value.length>0)" class="alert alert-danger">
+                <p *ngIf="loginform.get('email')?.getError('required')">email required</p>
+             
+                <p *ngIf="loginform.get('email')?.getError('email')"> email invalid</p>
+            
+            </div>
+        </div>
+     
+        <div>
+            <label for="password">password</label>
+            <input formControlName="password" class="form-control" type="password"  id="password">
+            <div  *ngIf="loginform.get('password')?.errors&&(loginform.get('password')?.touched||loginform.get('password')?.value.length>0)" class="alert alert-danger">
+                <p *ngIf="loginform.get('password')?.getError('required')">password required</p>
+                <p *ngIf="loginform.get('password')?.getError('pattern')">must be at least 6 chars</p>
+              
+            
+            </div>
+            
+        </div>
+    
+      <div class="d-flex justify-content-between">
+        <div>
+            <button [disabled]="loginform.invalid" type="submit"  class="btn color btn-primary mt-2">login now <span ><i *ngIf="loding==true" class="fa fa-linode fa-spin"></i></span></button>
+
+        </div>
+      <div>
+        <span routerLink="/forgetpasaword" class="btn mt-2 color1">forget your password ?</span>
+      </div>
+      </div>
+        <p class="alert alert-danger" *ngIf="errmess">{{errmess}}</p>
+      
+    </form>
+   
+    
+    </section>

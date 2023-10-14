@@ -1,0 +1,14 @@
+
+<section>
+    <form [formGroup]="reset" class="container py-4">
+
+        <h2>reset your account password</h2>
+
+        <input   formControlName="email" placeholder="email...." type="email" class="form-control py-4 mb-3">
+        <input   formControlName="newPassword" placeholder="newPassword ...." type="password" class="form-control py-4">
+        <p *ngIf="err" class="alert alert-danger ">{{err}}</p>
+        <button  (click)="getemail()"  class="btn btn-outline-success mt-4 btn-lg">verify</button>
+      
+    </form>
+</section>
+

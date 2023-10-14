@@ -1,0 +1,20 @@
+:host{
+    min-height: 100vh;
+    display: flex;
+flex-direction: column;
+
+}
+.gotoup{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: green;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    border: unset;
+}
+.main-fixed{
+padding-top: 70px;
+}
